@@ -16,7 +16,7 @@ class SimpleServer {
         post(route, { req, res ->
             log.info(req.userAgent())
             log.info(req.contentType())
-            log.debug(JsonOutput.prettyPrint(req.body()))
+            log.info(JsonOutput.prettyPrint(req.body()))
 
             try{
                 JsonSlurper slurper = new JsonSlurper()
