@@ -21,7 +21,7 @@ class SimpleServer {
             try{
                 JsonSlurper slurper = new JsonSlurper()
                 def result = slurper.parseText(req.body())
-                log.info(result.runName)
+                log.info("Run name was: ${result.runName}")
             } catch (Exception e){
                 res.type("text/plain")
                 res.status(404)
